@@ -1,6 +1,6 @@
+UserID	UserID
 DatasetType	DatasetType (test or train)
 ActivityType	ActivityType
-UserID	UserID
 tBodyAcc-mean()-X	mean calculation
 tBodyAcc-mean()-Y	mean calculation
 tBodyAcc-mean()-Z	mean calculation
@@ -47,36 +47,23 @@ fBodyAcc-mean()-Z	mean calculation
 fBodyAcc-std()-X	std calculation
 fBodyAcc-std()-Y	std calculation
 fBodyAcc-std()-Z	std calculation
-fBodyAcc-meanFreq()-X	mean calculation
-fBodyAcc-meanFreq()-Y	mean calculation
-fBodyAcc-meanFreq()-Z	mean calculation
 fBodyAccJerk-mean()-X	mean calculation
 fBodyAccJerk-mean()-Y	mean calculation
 fBodyAccJerk-mean()-Z	mean calculation
 fBodyAccJerk-std()-X	std calculation
 fBodyAccJerk-std()-Y	std calculation
 fBodyAccJerk-std()-Z	std calculation
-fBodyAccJerk-meanFreq()-X	mean calculation
-fBodyAccJerk-meanFreq()-Y	mean calculation
-fBodyAccJerk-meanFreq()-Z	mean calculation
 fBodyGyro-mean()-X	mean calculation
 fBodyGyro-mean()-Y	mean calculation
 fBodyGyro-mean()-Z	mean calculation
 fBodyGyro-std()-X	std calculation
 fBodyGyro-std()-Y	std calculation
 fBodyGyro-std()-Z	std calculation
-fBodyGyro-meanFreq()-X	mean calculation
-fBodyGyro-meanFreq()-Y	mean calculation
-fBodyGyro-meanFreq()-Z	mean calculation
 fBodyAccMag-mean()	mean calculation
 fBodyAccMag-std()	std calculation
-fBodyAccMag-meanFreq()	mean calculation
 fBodyBodyAccJerkMag-mean()	mean calculation
 fBodyBodyAccJerkMag-std()	std calculation
-fBodyBodyAccJerkMag-meanFreq()	mean calculation
 fBodyBodyGyroMag-mean()	mean calculation
 fBodyBodyGyroMag-std()	std calculation
-fBodyBodyGyroMag-meanFreq()	mean calculation
 fBodyBodyGyroJerkMag-mean()	mean calculation
 fBodyBodyGyroJerkMag-std()	std calculation
-fBodyBodyGyroJerkMag-meanFreq()	mean calculation

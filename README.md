@@ -19,4 +19,4 @@ Peer-graded Assignment: Getting and Cleaning Data Course Project
 11. Rename of activity types
 
 # Group by and summarize
-12. Group by DatasetType,ActivityType,UserID and summarize mean with help of gplyr
+12. Group by UserID,ActivityType and summarize mean with help of gplyr

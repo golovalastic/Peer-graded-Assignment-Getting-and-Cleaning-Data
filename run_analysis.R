@@ -3,6 +3,8 @@ library(dplyr)
 library(data.table)
 
 #read files
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","c:/Users/Jon/datasciencecoursera/Getting and Cleaning Data/Course Project/dat.zip")
+unzip("c:/Users/Jon/datasciencecoursera/Getting and Cleaning Data/Course Project/dat.zip")
 
 x.test <- read.table("UCI HAR Dataset/test/X_test.txt")
 y.test <- read.table("UCI HAR Dataset/test/y_test.txt")
@@ -35,9 +37,9 @@ dat.train <- dat.train %>% mutate(DatasetType = c("train"))
 #working with set of descriptive variable names: 
 #1.find variables which counts mean or std and create variable for filtering
 #2. filter set of varnames by "filter" variable described above
-#3. Create variable "varnames"
+#3. Create variable "varname"
 #4. Create vectors for select and rename: named.vector consist of new descriptive varnames and subsetting.vector which consists of original varnames for subsetting dataset. 
-feat$filter <- ifelse(grepl("mean|std",x = feat$V2),1,0)
+feat$filter <- ifelse(grepl("mean[()]|std[()]",x = feat$V2),1,0)
 feat.sub <- filter(feat,filter==1)
 feat.sub$varnames <- paste0("V",feat.sub$V1)
 subsetting.vector <- feat.sub$varnames
@@ -53,8 +55,10 @@ dat.sub$ActivityType <- factor(dat.sub$ActivityType,levels=c(1,2,3,4,5,6),labels
 dat.sub$DatasetType <- as.factor(dat.sub$DatasetType)
 
 #step 5 - group by and summarize of mean
-dat.sub2 <- dat.sub %>%
-  group_by(DatasetType,ActivityType,UserID) %>%
+tidy_data <- dat.sub %>%
+  group_by(UserID,DatasetType,ActivityType) %>%
   summarize_all(mean)
 
-write.table(dat.sub2,"dat_step5.txt", row.names = FALSE)
+write.table(tidy_data,"tidy_data.txt", row.names = FALSE)
+
+
